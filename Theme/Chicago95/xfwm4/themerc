@@ -13,10 +13,10 @@ inactive_color_1=#808080
 inactive_color_2=#808080
 
 #titletext
-active_text_color=#ffffff
+active_text_color=#000000
 
 #inactivetitletext
-inactive_text_color=#C0C0C0
+inactive_text_color=#b80000
 
 #buttonface
 active_mid_1=#C0C0C0
@@ -43,8 +43,8 @@ active_shadow_1=#000000
 inactive_shadow_1=#000000
 
 #buttontext
-active_mid_2=#000000
-inactive_mid_2=#000000
+active_mid_2=#A80000
+inactive_mid_2=#A80000
 
 button_layout=O|HMC
 button_offset=2

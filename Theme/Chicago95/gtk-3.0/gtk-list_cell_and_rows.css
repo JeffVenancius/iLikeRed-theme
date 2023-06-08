@@ -12,8 +12,8 @@
 cell:not(check):not(radio),
 row:not(check):not(radio) {
   border-width: 0px 0px 1px 0px;
-  border: solid transparent; }
-
+  border: solid transparent; 
+  color: white;}
 list > row label,
 list > row image {
   padding-left: 4px;

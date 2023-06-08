@@ -11,7 +11,7 @@
 
 /* Combobox */
 combobox {
-  background-color: @bg_color; }
+  background-color: @fg_color; }
   combobox button {
     padding: 1px;
     padding-left: 4px;
@@ -59,7 +59,8 @@ combobox window menu {    /* The combobox window menu is included for sub-menus 
 #gtk-combobox-popup-menu window {
   border: none;    /* Borders are not necessary here. */
   box-shadow: none;    /* Box shadows are not necessary here. */
-  background-color: @bg_bright; }    /* Background colour needs to be applied. */
+  background-color: @bg_bright;
+  color: white; }    /* Background colour needs to be applied. */
   #gtk-combobox-popup-menu arrow  {
     -gtk-icon-source: none; }
   #gtk-combobox-popup-menu menuitem {

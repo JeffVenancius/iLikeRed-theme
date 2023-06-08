@@ -32,7 +32,7 @@
   background-clip: padding-box;
   outline-width: 1px;
   outline-offset: 0px;
-  outline-color: @selected_inactive_bg_color;
+  outline-color: green;
   outline-style: solid; }
 
 .background {
@@ -145,7 +145,7 @@ calendar.view {
 calendar.header {
   border-style: solid;
   border-width: 1px;
-  border-color: @border_color @border_dark @border_dark @border_color;
+  border-color: green @border_dark @border_dark green;
   box-shadow: inset 1px 1px @border_bright, inset -1px -1px @border_shade;
   border-radius: 0px;
   background-color: @bg_color; }
@@ -329,7 +329,7 @@ stack overlay box box scrolledwindow viewport list row {
       box-shadow: inset 1px 1px @border_shade_dark, inset -1px -1px @border_light; }
   .sidebar.view,
   .sidebar .view {
-    background-color: @bg_bright;
+    background-color: #181818;
     color: @text_color;
     box-shadow: none;}
     .sidebar {

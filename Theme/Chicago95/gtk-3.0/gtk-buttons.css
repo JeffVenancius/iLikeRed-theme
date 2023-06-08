@@ -14,7 +14,7 @@ button {
   min-height: 14px;
   min-width: 14px;
   padding: 2px;
-  border: 1px solid;
+  border: 2px solid;
   border-radius: 0px;
   transition: none;
   color: @button_text_color;
@@ -25,23 +25,20 @@ button {
   border-bottom-color: @border_dark;
   background-color: @button_bg_color;
   box-shadow: inset -1px -1px @border_shade, inset 1px 1px @border_light; }
-  button:hover {
-    -gtk-icon-effect: highlight; }
+  button:hover,
   button:active,
   button:checked,
   button:disabled:active,
   button:disabled:checked {
-    border-top-color: @border_dark;
-    border-right-color: @border_bright;
-    border-left-color: @border_dark;
-    border-bottom-color: @border_bright;
-    box-shadow: inset 1px 1px @border_shade; }
+    border: 2px solid @border_shade;
+    background-color: @bg_color;
+    color: white; }
 
 /* Sidebar buttons */
 button.sidebar-button {
   color: @text_color_light;
-  border-top: 1px solid @border_color;
-  border-left: 1px solid @border_color;
+  border-top: 2px solid @border_color;
+  border-left: 2px solid @border_color;
   box-shadow: inset 1px 1px @border_bright, inset -1px -1px @border_shade;
   transition: none; }
   button.sidebar-button:hover,
@@ -51,25 +48,6 @@ button.sidebar-button {
 
 /* Dialogue buttons. */
 /* We're using border images here since dialog button borders are 3px on Windows 95 with individual colour properties.*/
-.dialog-action-area button {
-  min-height: 16px;
-  min-width: 16px;
-  box-shadow: none;
-  border: 3px solid @border_dark;
-  border-image: url("buttons/dialog_button_normal.png");
-  border-image-slice: 3 3 3 3; }
-  .dialog-action-area button:focus {
-  border-image: url("buttons/dialog_button_focus.png");
-  border-image-slice: 3 3 3 3; }
-  .dialog-action-area button:disabled {
-    border-image: url("buttons/dialog_button_normal.png");
-    border-image-slice: 3 3 3 3; }
-  .dialog-action-area button:active,
-  .dialog-action-area button:checked,
-  .dialog-action-area button:disabled:active,
-  .dialog-action-area button:disabled:checked {
-    border-image: url("buttons/dialog_button_active.png");
-    border-image-slice: 3 3 3 3; }
 
 /* Row buttons */
 row:selected button:selected {
@@ -115,6 +93,7 @@ button.color {
         box-shadow: none; }
 
 /* Toolbar buttons */
+.dialog-action-area button,
 .inline-toolbar button,
 .primary-toolbar button,
 toolbutton button,
@@ -127,10 +106,20 @@ toolbutton .toggle,
   border-bottom: 1px solid @border_dark;
   border-right: 1px solid @border_dark;
   box-shadow: inset -1px -1px @border_shade; }
+  .dialog-action-area button:hover,
+  .dialog-action-area button:focus,
+  .inline-toolbar button:hover,
+  .primary-toolbar button:hover,
+  toolbutton button:hover,
+  toolbutton .toggle:hover,
+  .path-bar button:hover {
+  border: 1px solid @border_shade;  }
+  .dialog-action-area button:active,
   .inline-toolbar button:active,
   .primary-toolbar button:active,
   toolbutton button:active,
   .path-bar button:active
+  .dialog-action-area button:checked,
   .inline-toolbar button:checked,
   .primary-toolbar button:checked,
   toolbutton button:checked,
@@ -222,17 +211,25 @@ spinbutton:not(.vertical) {
 /* suggested action buttons */
 .suggested-action.button {
   color: @info_fg_color;
-  background-color: @info_bg_color; }
+  background-color: green; } */
 
 /* toolitem box button */
 toolitem button {
   background-color: @button_bg_color;
-  border-left: 1px solid @border_color;
-  border-right: 1px solid @border_dark;
-  border-bottom: 1px solid @border_dark;
-  border-top: 1px solid @border_color;
+  border-left: 2px solid @border_color;
+  border-right: 2px solid @border_dark;
+  border-bottom: 2px solid @border_dark;
+  border-top: 2px solid @border_color;
   box-shadow: inset 1px 1px @border_bright, inset -1px -1px @border_shade; }
-
+  toolitem button:hover {
+    border-right: 2px solid @bg_color;
+    border-bottom: 2px solid @bg_color;  }
+  toolitem button:active,
+  toolitem button:checked,
+  toolitem button:disabled:active,
+  toolitem button:disabled:checked {
+    border-left: 2px solid @bg_color;
+    border-top: 2px solid @bg_color; }
 
 iconview {
   -GdMainIconView-icon-size: 48; }
@@ -241,8 +238,8 @@ box-shadow: inset 1px 1px @border_color, inset -1px -1px @border_color; }
 
 /* image buttons */
 .image-button {
-  padding: 0px;
-  color: @text_color; }
+  padding: 2px;
+  color: @bg_color; }
   .image-button label {
     padding-left: 4px;
     padding-right: 4px; }
