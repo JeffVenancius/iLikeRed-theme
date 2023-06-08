@@ -1,6 +1,5 @@
 ## iLikeRed - A minimalist theme based on Chicago95
 
-In progress - which you should read as:
-I'll mess with the theme as to fit my needs and update in github.
+In progress - I'm messing with it to fit my design needs.
 
 ![](README_20230608164427425.png)
